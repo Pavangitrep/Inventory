@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory Management System</h1>
+       
+        <form id="inventory-form">
+            <input type="text" id="item-name" placeholder="Item Name" required>
+            <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+            <input type="number" id="price" placeholder="Price" step="0.01" min="0.01" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <button type="submit">Add Item</button>
+        </form>
+       
+        <div class="controls">
+            <input type="text" id="search-bar" placeholder="Search by name or category">
+            <button onclick="sortItems('asc')">Sort by Price (Ascending)</button>
+            <button onclick="sortItems('desc')">Sort by Price (Descending)</button>
+        </div>
+       
+        <div id="inventory-list">
+            <!-- Inventory items will be dynamically inserted here -->
+        </div>
+       
+        <div class="total-value">
+            Total Value: $<span id="total-value">0.00</span>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
